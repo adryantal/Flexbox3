@@ -1,1 +1,3 @@
 Ez a fájl első sora.
+
+Ezt a második sort a fájlt a lokális mappából megnyitva írom.
