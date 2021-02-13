@@ -1,3 +1,11 @@
 Ez a fájl első sora.
 
 Ezt a második sort a fájlt a lokális mappából megnyitva írom.
+
+Ezt a sort ismét Githubon gépelem be, ahogyan a legelsőt is.
+
+Ez pedig már a negyedik sor.
+
+Most jöjjön az ötödik!
+
+És végül a hatodik!
