@@ -1,3 +1,11 @@
 Ez a fájl első sora.
 
 Ezt a második sort a fájlt a lokális mappából megnyitva írom.
+
+Ez most ismét egy lokális módosítás.
+
+Ezek most nagyon fontos információk:
+
+Info 1
+Info2
+Info3
