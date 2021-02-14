@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+
+body{    
+    background: url("kepek/bg.jpg");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+main {
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+    padding: 10px;
+    background: lightpink;
+    box-shadow: 2px 5px 5px rgba(172, 117, 155, 0.7);
+    border-radius: 5px;
+
+}
+
+header, main, nav, article, section, footer {
+    border: 1px solid rgba(172, 117, 155, 0.5);
+    padding: 10px;
+}
+
+
+article {
+    /*a section-ök szülőeleme; egy oszlop, amelyen belül minden gyerekelem, azaz section egy-egy sor lesz 
+    --> ezért a sectionöket majd sorként kell "definiálni"*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+    background: #FBF3F8;    
+}
+
+section h2{
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background: pink;
+    border: 1px solid rgba(224, 126, 224, 0.5);
+    border-radius: 5px;
+    padding: 5px;  
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(224, 126, 224, 0.5);
+}
+
+
+a {
+    text-decoration: none;    
+    padding: 5px;
+    letter-spacing: 0.5px;
+    padding: 5px;
+}
+
+
+
+header, nav, footer, section h2{
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+header h1{    
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(224, 126, 224, 0.5);
+    font-size: 32px;
+    text-align: center;
+    filter: drop-shadow(5px 5px 4px rgb(160, 0, 210, 0.2));
+}
+
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+section img{
+    height: 200px;
+    border: 1px solid pink;
+    padding: 3px;
+    margin: 3px;
+    transition: 1s all;
+    transition-property: opacity, transform, border;
+}
+
+section img:hover{
+    transform: rotateY(180deg);
+    opacity: 0.8;
+    border: 1px solid fuchsia;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+footer nav{
+    display: flex;
+    justify-content: center;
+
+}
+
+footer nav a {
+    padding: 5px;
+}
+
+nav #jobb {
+    display: flex;
+    flex-direction: row-reverse; /*fordított sorrend kialakítása*/
+}
+
+
+nav #jobb a, footer nav a{
+
+    margin-left: 3px;
+    color: rgba(213, 51, 172, 1);
+    transition: 0.5s all;
+    transition-property: color, text-shadow, background;
+    background: rgba(191, 63, 191, 0.1);
+    text-shadow: 1px 2px 3px pink;
+    border: 1px solid rgba(191, 63, 191, 0.3);
+    border-radius: 4px;
+}
+
+
+nav #jobb a:hover, footer nav a:hover{
+
+    color:lightblue;
+    background: rgba(191, 63, 191, 0.3);
+    border: 1px solid lightblue;
+    text-shadow: 1px 2px 2px darkorchid;
+    border-radius: 4px;
+}
+
+
+nav #bal a{
+    color:lightblue;
+    background: rgba(191, 63, 191, 0.3);
+    border: 1px solid lightblue;
+    text-shadow: 1px 2px 2px darkorchid;
+    border-radius: 4px;
+    transition: 0.5s all;
+    transition-property: color, text-shadow, background;
+
+}
+
+nav #bal a:hover{
+
+    color: rgba(213, 51, 172, 1);    
+    background: rgba(191, 63, 191, 0.1);
+    text-shadow: 1px 2px 3px pink;
+    border: 1px solid rgba(191, 63, 191, 0.3);
+    border-radius: 4px;
+}
+
+
+/*
+id nélküli mego:
+
+nav div:nth child(2){
+display: flex;
+flex-direction: row-reverse;
+
+}
+*/
+
+
+
+/*
+@media screen and (max-width: 600px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    section{
+        flex: 1 1 100%; 
+    }
+}  
+
+*/
+
+
+
+
+@media screen and (max-width: 800px){
+
+    section{
+        /*itt a section-re, mint szülőelemre kell alkalmazni az "oszloposítást"*/
+        display: flex;
+        flex-direction: column;        
+        /*egy oszlopba tegyen mindent, 100% széleséggel*/
+        flex: 1 1 100%; 
+        /*egységes lesz a belső margó, a gyerekelemek "középre" kerülnek":*/
+        align-content: space-around;
+    }
+
+    section h2{
+        transform: none;
+        width: 100%;
+        /*szöveg balra rendezése*/
+        display: flex;
+        justify-content: flex-start;
+       
+        
+    }
+
+    section img{
+        width: 100%;
+        height: auto;
+        
+    }
+
+    nav{
+        display: flex;        
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+
+    }
+
+    nav #bal{
+        display: flex; 
+        flex-direction: column;   
+
+    }
+
+    nav #jobb{        
+        flex-direction: column-reverse; 
+
+    }
+
+
+    nav a{
+        margin: 5px;
+    }
+
+}  
